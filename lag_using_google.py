@@ -20,7 +20,7 @@ def translate():
 			text=file.read()
 			trans=translator.translate(text)
 			print("\n\nLanguage you Entered Text is--------->",trans.src)
-		file_up="/home/hardik/Desktop/"+file_up_name+".txt"
+		file_up="C:\\Users\\hseth\\Desktop\\"+file_up_name+".txt"
 		print(file_up)
 		file_des=open(file_up,"w",encoding="utf-8")
 		file_des.write(trans.text)

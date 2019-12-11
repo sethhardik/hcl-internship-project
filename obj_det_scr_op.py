@@ -2,7 +2,7 @@
 from keras.models import load_model
 from os import system
 def model_pred(image):
-	model = load_model("/home/hardik/Desktop/HCL_project_1/model_object_detect.h5")
+	model = load_model("C:\\Users\\hseth\\Desktop\\HCL_project_1\\model_object_detect.h5")
 	yhat = model.predict(image)
 	system("clear")
 	print("[info] predicted probabilities are:",yhat)
