@@ -14,9 +14,9 @@ from keras.layers import Dense,Flatten
 def model_train():
 #------------------------data loading and preprocessing------------------------------------
 	no_classes=9
-	epochs=30
+	epochs=40
 	X,y=[],[]
-	train_data_dir="/home/hardik/Desktop/HCL_project_1/data/"
+	train_data_dir="C:\\Users\\hseth\\Desktop\\HCL_project_1\\data\\"
 
 	train_data=[train_data_dir+i for i in os.listdir(train_data_dir)]
 	for img in train_data:
@@ -86,5 +86,5 @@ def model_train():
 	model.fit_generator(lit_data,steps_per_epoch=len(X)/12,epochs=epochs,verbose=1,validation_data=(Xtest,ytest))
 
 #-----------------------------------SAVING MODEL------------------------------------------------
-	print("[INFO] Model Saved at Location:/home/hardik/Desktop/HCL_project_1/ as model_object_detect.h5")
-	model.save("/home/hardik/Desktop/model_object_detect.h5")
+	print("[INFO] Model Saved at Location:C:\\Users\\hseth\\Desktop\\HCL_project_1\\ as model_object_detect.h5")
+	model.save("C:\\Users\\hseth\\Desktop\\HCL_project_1\\model_object_detect.h5")
